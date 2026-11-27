@@ -33,7 +33,7 @@ T = {
         "temp": "🌡️ Temperature", "manual": "Set manually (demo)", "air": "Air, °C",
         "now": "Riga now: {t:+.1f}°C (Open-Meteo)", "no_weather": "Weather unavailable",
         "ir": "Surface IR sensor", "surface": "Surface, °C",
-        "show": "Show on map", "no_model": "Model not found: {p}\n\nDownload `IceSpotter/models/best.pt` from Google Drive into `models`.",
+        "show": "Show on map", "no_model": "Model not found: {p}\n\nDownload `IceSpotter/models/icespotter_v8.pt` from Google Drive into `models`.",
         "check": "📷 Check a new photo", "upload": "Sidewalk photo", "roi_up": "ROI (frame from a vehicle)",
         "cls": "Class", "lat": "Latitude", "lon": "Longitude",
         "no_gps": "No GPS in the photo — set coordinates manually (default: Ķīpsala)",
@@ -78,7 +78,7 @@ T = {
         "temp": "🌡️ Temperatūra", "manual": "Iestatīt manuāli (demo)", "air": "Gaiss, °C",
         "now": "Rīgā tagad: {t:+.1f}°C (Open-Meteo)", "no_weather": "Laikapstākļi nav pieejami",
         "ir": "Virsmas IR sensors", "surface": "Virsma, °C",
-        "show": "Rādīt kartē", "no_model": "Modelis nav atrasts: {p}\n\nLejupielādē `IceSpotter/models/best.pt` no Google Drive mapē `models`.",
+        "show": "Rādīt kartē", "no_model": "Modelis nav atrasts: {p}\n\nLejupielādē `IceSpotter/models/icespotter_v8.pt` no Google Drive mapē `models`.",
         "check": "📷 Pārbaudīt jaunu foto", "upload": "Ietves foto", "roi_up": "ROI (kadrs no transporta)",
         "cls": "Klase", "lat": "Platums", "lon": "Garums",
         "no_gps": "Fotogrāfijā nav GPS — iestati koordinātas manuāli (pēc noklusējuma Ķīpsala)",
@@ -269,7 +269,7 @@ with st.sidebar:
                     format_func=lambda x: {"en": "🇬🇧 English", "lv": "🇱🇻 Latviešu"}[x])
     L = T[lang]
     st.header(L["settings"])
-    model_path = st.text_input(L["model"], str(BASE / "models" / "best.pt"))
+    model_path = st.text_input(L["model"], str(BASE / "models" / "icespotter_v8.pt"))
     photos_dir = st.text_input(L["photos"], str(BASE / "data" / "photos"))
     info_path = st.text_input(L["info"], str(BASE / "data" / "info.csv"))
     folder_roi = st.checkbox(L["roi_folder"], value=False, help=L["roi_help"])
